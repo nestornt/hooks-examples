@@ -4,7 +4,7 @@ const fruites = ['apple', 'banana', 'blackberries', 'blueberries', 'strawberry',
 export default function Search() {
     const [text, setText] = useState('')
     const [query, setQuery] = useState('')
-    // const matched = fruites.filter(v => v.includes(query))
+    
     const matched = useMemo(() => {
       console.log('created', query)  
       return fruites.filter(v => v.includes(query))
