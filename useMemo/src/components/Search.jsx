@@ -1,7 +1,7 @@
-import { useState, useMemo, useEffect } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 const fruites = ['apple', 'banana', 'blackberries', 'blueberries', 'strawberry', 'pineapple']
 
-export default function Search() {
+const Search = React.memo(function() {
     const [text, setText] = useState('')
     const [query, setQuery] = useState('')
     
@@ -21,4 +21,6 @@ export default function Search() {
         <p>{matched.join("\t")}</p>
       </>
     )
-}
+})
+
+export default Search
