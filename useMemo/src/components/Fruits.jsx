@@ -7,7 +7,7 @@ export const Fruits = React.memo(function() {
     const [text, setText] = useState('')
     const [query, setQuery] = useState('')
 
-    // useMemo will always use the same instance of the function instead creating one every time we call it
+    // useMemo will always return the same instance object 
     // matched will be only called when "query" state changes
     const matched = useMemo(() => {
       console.log('created', query) 
